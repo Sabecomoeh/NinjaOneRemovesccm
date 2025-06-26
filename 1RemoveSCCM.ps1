@@ -1,3 +1,6 @@
+<#Remember to Disable the GPO that install SCCM
+PowerShell might clean the registry, but the GPO will just swoop in like a digital ghost of SCCM past and reapply those settings during the next policy refresh. It's the ultimate "I'll be back" moment, but for Windows updates. So, disable that GPO first. Trust me, your future self (and your sanity) will thank you.#>
+
 # Function to check for administrator privileges
 function Test-IsAdministrator {
     $currentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
