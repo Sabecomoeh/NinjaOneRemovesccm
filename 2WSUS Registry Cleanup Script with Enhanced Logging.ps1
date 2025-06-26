@@ -1,3 +1,13 @@
+<#
+WSUS-Specific Keys: These are the usual suspects – WUServer, WUStatusServer, TargetGroup, etc. – that scream, "I was managed!"
+If these are present, it's like finding the keys: "Do Not Erase: LAN Manager Configuration." Total retro tech Easter egg!
+
+AU Keys: These relate to how Automatic Updates behave. Notably, NoAutoUpdate (the "I choose my own update destiny!" key) and AUOptions (how often to check, install, etc.) are also checked. Even if SCCM has packed its bags, these might still hold configurations about how your system prefers its updates (e.g., "download but let me choose," or "just get it over with"). 
+
+#>
+
+
+
 [CmdletBinding()] # Enables advanced cmdlet features like common parameters (e.g., -Verbose, -Debug)
 param(
     [switch]$AutoReboot # Parameter to automatically reboot the system if changes are made
